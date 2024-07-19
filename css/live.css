@@ -1,4 +1,4 @@
-@charset "uft-8";
+@charset "utf-8";
 .live .section-top {
   margin-bottom: 25px;
 }
@@ -48,7 +48,7 @@
   margin-bottom: 20px;
 }
 .live-info-title {
-  font-size: 20px;
+  font-size: 2rem;
   color: #fff;
   line-height: 24px;
   /* 2줄 말줄임표시 */
@@ -68,17 +68,17 @@
   text-align: center;
 }
 .live-info-date {
-  color: #fff;
-  font-size: 28px;
-  line-height: 33px;
-  margin-bottom: 5px;
-}
-.live-info-time {
-  color: #fff;
-  font-size: 50px;
-  line-height: 60px;
-  font-weight: 700;
-}
+    color: #fff;
+    font-size: 2.8rem;
+    line-height: 33px;
+    margin-bottom: 5px;
+  }
+  .live-info-time {
+    color: #fff;
+    font-size: 5rem;
+    line-height: 60px;
+    font-weight: 700;
+  }
 /* 하단 */
 .live-info-bottom {
   display: flex;
@@ -106,8 +106,8 @@
   width: calc(100% - 65px);
 }
 .live-info-desc-title {
-  width: calc(100% - 65px);
-  font-size: 15px;
+  width: calc(100% - 35px);
+  font-size: 1.5rem;
   line-height: 18px;
   color: #fff;
   /* 1줄 말줄임 */
@@ -117,20 +117,20 @@
   margin-top: 10px;
 }
 .live-info-desc-price {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #fff;
   margin-top: 5px;
 }
 .live-info-desc-price em {
   color: #ef3e43;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 24px;
   font-weight: 700;
   font-style: normal;
 }
 .live-info-desc-price b {
   color: #fff;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 24px;
   font-weight: 700;
 }

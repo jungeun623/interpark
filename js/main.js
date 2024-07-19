@@ -73,6 +73,7 @@ window.onload = function () {
       },
     },
   });
+
   // 투어의 스와이퍼 기능적용
   const swTour = new Swiper(".sw-tour", {
     // 모바일버전
@@ -123,7 +124,6 @@ window.onload = function () {
       nextEl: ".ticket .sw-next",
       prevEl: ".ticket .sw-prev",
     },
-
     loop: true,
     breakpoints: {
       480: {
@@ -140,10 +140,16 @@ window.onload = function () {
       },
     },
   });
+
   // live 스와퍼
-  const swlive = new Swiper(".sw-live", {
-    slidesPerView: 4,
-    spaceBetween: 20,
+  const swLive = new Swiper(".sw-live", {
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".live .sw-next",
+      prevEl: ".live .sw-prev",
+    },
+    loop: true,
     breakpoints: {
       480: {
         spaceBetween: 32,
@@ -179,4 +185,20 @@ window.onload = function () {
       },
     },
   });
+
+  // book 스와퍼
+  const swBooks = new Swiper(".sw-books",{
+    slidesPerView: 5,
+    spaceBetween: 20,
+    breakpoints: {
+      1280: {
+        spaceBetween: 25,
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
+  })
 };

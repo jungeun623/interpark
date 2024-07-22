@@ -47,9 +47,17 @@ window.onload = function () {
     },
     spaceBetween: 10,
     breakpoints: {
-      900: {
+      480: {
         spaceBetween: 32,
-        slidesPerView: 4,
+        slidesPerView: 2,
+        grid: {
+          rows: 1,
+        },
+        slidesPerGroup: 3,
+      },
+      680: {
+        spaceBetween: 32,
+        slidesPerView: 3,
         grid: {
           rows: 1,
         },
@@ -116,6 +124,7 @@ window.onload = function () {
       },
     },
   });
+
   // ticket스와퍼
   const swTicket = new Swiper(".sw-ticket", {
     slidesPerView: 1.2,
@@ -141,44 +150,77 @@ window.onload = function () {
     },
   });
 
-  // live 스와퍼
+  // live스와퍼
   const swLive = new Swiper(".sw-live", {
-    slidesPerView: 1.2,
-    spaceBetween: 10,
     navigation: {
       nextEl: ".live .sw-next",
       prevEl: ".live .sw-prev",
     },
     loop: true,
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+    breakpoints: {
+      330: {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+
+      675: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 27,
+      },
+    },
+  });
+
+  // books스와퍼
+  const books = new Swiper(".sw-books", {
+    navigation: {
+      nextEl: ".books .sw-next",
+      prevEl: ".books .sw-prev",
+    },
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 19,
+    grid: {
+      rows: 5,
+      fill: "row",
+    },
     breakpoints: {
       480: {
-        spaceBetween: 32,
         slidesPerView: 2,
-        slidesPerGroup: 1,
+        spaceBetween: 20,
         grid: {
           rows: 1,
         },
       },
-      720: {
-        spaceBetween: 32,
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        grid: {
-          rows: 1,
-        },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
       1024: {
-        spaceBetween: 32,
-        slidesPerView: 3,
-        slidesPerGroup: 2,
+        slidesPerView: 4,
+        slidesPerGroup: 3,
+        spaceBetween: 30,
         grid: {
           rows: 1,
         },
       },
       1280: {
-        spaceBetween: 26,
-        slidesPerView: 4,
-        slidesPerGroup: 4,
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+        spaceBetween: 27,
         grid: {
           rows: 1,
         },
@@ -186,19 +228,43 @@ window.onload = function () {
     },
   });
 
-  // book 스와퍼
-  const swBooks = new Swiper(".sw-books",{
-    slidesPerView: 5,
+  // events 스와퍼
+  const event = new Swiper(".sw-events", {
+    navigation: {
+      nextEl: ".events .sw-next",
+      prevEl: ".events .sw-prev",
+    },
+    loop: true,
+    slidesPerView: 4,
     spaceBetween: 20,
+    grid: {
+      rows: 3,
+      fill: "row",
+    },
     breakpoints: {
+      480: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 20,
+      },
       1280: {
-        spaceBetween: 25,
-        slidesPerView: 5,
-        slidesPerGroup: 5,
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 27,
         grid: {
-          rows: 1,
+          rows: 4,
         },
       },
     },
-  })
+  });
 };

@@ -1,4 +1,16 @@
 window.onload = function () {
+  // topbt기능
+  const topBtn = document.querySelector("#gotop");
+  topBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (window.scrollY !== 0) {
+      // 현재 스크롤 위치가 0이 아니면 top으로 스크롤
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  });
   // 상단의 마이페이지리스트 기능
   const mypageBt = document.querySelector(".mypage-bt");
   const mypageList = document.querySelector(".mypage-list");
@@ -228,42 +240,13 @@ window.onload = function () {
     },
   });
 
-  // events 스와퍼
-  const event = new Swiper(".sw-events", {
-    navigation: {
-      nextEl: ".events .sw-next",
-      prevEl: ".events .sw-prev",
-    },
-    loop: true,
-    slidesPerView: 4,
-    spaceBetween: 20,
-    grid: {
-      rows: 3,
-      fill: "row",
-    },
+  // event 스와퍼
+  const swEvent = new Swiper(".sw-events", {
+    slidesPerView: 3,
+    spaceBetween: 27,
     breakpoints: {
-      480: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 15,
-      },
-      768: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 15,
-      },
-      1024: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 20,
-      },
       1280: {
         slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 27,
-        grid: {
-          rows: 4,
-        },
       },
     },
   });
